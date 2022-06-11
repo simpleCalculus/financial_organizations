@@ -1,0 +1,6 @@
+{
+  "driver":   "postgres",
+  "username": "postgres",
+  "password": "201640",
+  "dbname":   "alif"
+}
