@@ -1,0 +1,77 @@
+// User1
+
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "login": "test",
+  "password": "123"
+}
+
+###
+
+POST http://localhost:8080/authentication
+X-UserId: 1
+X-Digest: E05gezGtBApuw+9lqIqXkZ5lsUo=
+
+###
+
+POST http://localhost:8080/balance
+X-UserId: 1
+X-Digest: E05gezGtBApuw+9lqIqXkZ5lsUo=
+
+###
+
+POST http://localhost:8080/replenishment
+X-UserId: 1
+X-Digest: E05gezGtBApuw+9lqIqXkZ5lsUo=
+
+{
+"amount":25000
+}
+
+###
+
+POST http://localhost:8080/transactions
+X-UserId: 1
+X-Digest: E05gezGtBApuw+9lqIqXkZ5lsUo=
+
+###
+
+// User 2
+
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "login": "login",
+  "password": "qwerty"
+}
+
+###
+
+POST http://localhost:8080/authentication
+X-UserId: 2
+X-Digest: A2APKpmucisO0+OSelpn83LYqHw=
+
+###
+
+POST http://localhost:8080/balance
+X-UserId: 2
+X-Digest: A2APKpmucisO0+OSelpn83LYqHw=
+
+###
+
+POST http://localhost:8080/replenishment
+X-UserId: 2
+X-Digest: A2APKpmucisO0+OSelpn83LYqHw=
+
+{
+"amount":1
+}
+
+###
+
+POST http://localhost:8080/transactions
+X-UserId: 2
+X-Digest: A2APKpmucisO0+OSelpn83LYqHw=
